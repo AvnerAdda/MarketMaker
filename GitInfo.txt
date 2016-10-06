@@ -1,11 +1,23 @@
-$ mkdir ~/MarketMaker (creer un  dossier MarkerMaker)
-$ cd MarketMaker (rentre dans MarketMaker)
-$ git init (initialisation d'un depot)
-$ touch READ (creer un fichier READ)
-$ git add READ (ajoute READ au depot)
-$ git commit -m 'premier commit' (commiter un fichier avec le message 'premier comit')
-$ git remote add origin https://github.com/AvnerAdda/MarketMaker.git (ajoute au projet MarketMaker)
-$ git push origin master (ajouter)
+1) Ouvrir la console github GitBash
+2) Creer un dossier MarketMaker 
+	$ mkdir ~/MarketMaker
+	(verifier si c'est bon : $ ls)
+3) Rentrer dans le dossier
+	$ cd MarketMaker
+4) Passez Admin
+	$ git init 
+5) Creer un fichier test
+	$ touch Test
+6) Ajouter le fichier au debot 
+	$ git add Test
+7) Commiter le fichier avec un message 'premier'
+	$ git commit -m 'premier'
+8) Aller dans github dans "<> Code" en vert "Clone or Download" copier coller le lien
+	$ git remote add origin https://github.com/..../MarketMaker.git
+9) Pousser le fichier et rentrer vos user et mdp
+	$ git push origin master
+	$ git push --force --set-upstream origin master (si marche pas)
+
 $ git pull (ajoute a une nouvll branche)
 $ cd .. (retourner au fichier precedent)
 $ ls (affiche les fichier en local)
@@ -13,4 +25,3 @@ $ rm -rf .git (s'enlever de master)
 $ git clone git://git.kernel.org/pub/scm/git/git.git (mettre a jour github)
 $ git config (mes config)
 $ git config --list (toute les config)
-$ git push --force --set-upstream origin master (verification)
