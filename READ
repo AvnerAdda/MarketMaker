@@ -3,20 +3,34 @@ Projet PII4
 Titre : 
 Résolution d’un problème d’un concours Kaggle : Give me some credit
 Description : 
-Le but de ce projet est de construire de construire une fonction de score de crédit sur une base de données de crédit accordés à des particuliers et de décrire le lien entre les variables explicatives du risque de crédit et le défaut de paiement des emprunteurs. Le processus d’acception d’un crédit à la consommation doit être très rapide en particulier lorsque les clients ont besoin d’un crédit en magasin au moment de leur achat (exemple : paiement en trois fois sans frais, cartes type Cofinoga…). Depuis très longtemps, les banques et les organismes de crédit ont développé des méthodes automatiques et instantanées de notation de la solvabilité des clients et de leur capacité à rembourser le crédit. Ces outils sont très utiles pour une acceptation rapide d’octroi de crédit, mais aussi pour déterminer le montant de l’enveloppe d’autorisation de crédit ou pour effectuer le suivi du risque des clients et des portefeuilles de prêts. Le score de crédit est une fonction qui attribue une valeur de qualité de crédit à un client ou un prêt en fonction de variables explicatives telles que le ratio d’endettement de l’emprunteur, son comportement de compte ou tout autre grandeur qui est corrélée au défaut de l’emprunteur. Nous recherchons une forme fonctionnelle qui lie les variables explicatives à la grandeur expliquée (le défaut de paiement) et nous calibrons les paramètres de cette fonction à partir d’un échantillon d’entrainement (training set) et d’un échantillon de validation (cross-validation set). La précision du modèle obtenu est ensuite testée sur un échantillon de test (testing set) afin de s’assurer que nous n’avons pas overfitté le modèle sur les données d’entrainement. De nombreuses solutions de calibrage des modèles de machine learning existent, notamment via les packages dédiés écrits dans des langages utilisés par les data scientists (Python, R, matlab…). Les fonctions scores construites seront utilisées pour prédire le risque de défaut des crédits à la consommation, d’abord par une analyse statistique et l’utilisation de modèles de machine learning, puis en utilisant une plateforme de backtest. 
+Le but de ce projet est de construire de construire une fonction de score de crédit sur une base de données de crédit accordés à des particuliers et
+de décrire le lien entre les variables explicatives du risque de crédit et le défaut de paiement des emprunteurs. 
+Le processus d’acception d’un crédit à la consommation doit être très rapide en particulier lorsque les clients ont besoin d’un crédit en magasin au moment de leur achat
+(exemple : paiement en trois fois sans frais, cartes type Cofinoga…).
+ Depuis très longtemps, les banques et les organismes de crédit ont développé des méthodes automatiques et instantanées de notation de la solvabilité des clients et de leur capacité
+à rembourser le crédit. Ces outils sont très utiles pour une acceptation rapide d’octroi de crédit, mais aussi pour déterminer le montant de l’enveloppe d’autorisation de crédit ou
+pour effectuer le suivi du risque des clients et des portefeuilles de prêts. Le score de crédit est une fonction qui attribue une valeur de qualité de crédit à un client ou un prêt
+en fonction de variables explicatives telles que le ratio d’endettement de l’emprunteur, son comportement de compte ou tout autre grandeur qui est corrélée au défaut de l’emprunteur.
+Nous recherchons une forme fonctionnelle qui lie les variables explicatives à la grandeur expliquée (le défaut de paiement) et nous calibrons les paramètres de cette fonction
+à partir d’un échantillon d’entrainement (training set) et d’un échantillon de validation (cross-validation set).
+ La précision du modèle obtenu est ensuite testée sur un échantillon de test (testing set) afin de s’assurer que nous n’avons pas overfitté le modèle sur les données d’entrainement.
+ De nombreuses solutions de calibrage des modèles de machine learning existent, notamment via les packages dédiés écrits dans des langages utilisés par les data scientists
+(Python, R, matlab…). 
+Les fonctions scores construites seront utilisées pour prédire le risque de défaut des crédits à la consommation, d’abord par une analyse statistique et l’utilisation de modèles de
+machine learning, puis en utilisant une plateforme de backtest. 
 Les grandes étapes du projet : 
 • Séparation de la base de données en trois sous-ensembles : le training set, le cross-validation set et le test set. 
 • Analyse statistique des données du training set et du cross-validation set 
 • Analyse statistique des données d’observation de défaut 
 • Construction d’un ou plusieurs scores, en utilisant la régression logistique ou les arbres de décisions
 • Utilisation du tests set pour conclure à la meilleur fonction score. Le critère de succès est l’obtention du meilleur AR (Accuracy ratio) sur le test set.
+
 Définitions :
 
 Kaggle: 	https://www.kaggle.com/ 
-Kaggle est une plateforme web organisant des compétitions en science des données. Sur cette plateforme, les entreprises proposent des problèmes en science des données et offrent un prix aux datalogistes obtenant les meilleures performances. 
-	https://www.kaggle.com/c/GiveMeSomeCredit
+Kaggle est une plateforme web organisant des compétitions en science des données. Sur cette plateforme, les entreprises proposent des problèmes en science des données et offrent un prix aux datalogistes obtenant les meilleures performances. https://www.kaggle.com/c/GiveMeSomeCredit
 Score de crédit : 	http://frenchdistrict.com/articles/credit-score-construire-explications-historique/
-Risque de crédit : Le risque de crédit, ou de contrepartie, est le risque de perte sur une créance ou plus généralement celui d'un tiers qui ne paie pas sa dette à temps. Il est naturellement fonction de trois paramètres: le montant de la créance, la probabilité de défaut et la proportion de la créance qui ne sera pas recouvrée en cas de défaut.
+Risque de crédit : Le risque de crédit, ou de contrepartie, est le risque de perte sur une créance ou plus généralement celui d'un tiers qui ne paie pas sa dette à temps.Il est naturellement fonction de trois paramètres: le montant de la créance, la probabilité de défaut et la proportion de la créance qui ne sera pas recouvrée en cas de défaut.
 Défaut de paiement : Le défaut de paiement désigne le fait qu'une entreprise ou un pays ne soit pas en mesure d'honorer une partie ou la totalité de ses engagements envers un tiers.
 Cofinoga : 	Cofinoga est l’un des principaux acteurs du crédit à la consommation en France, depuis 40 ans. Cofinoga est la marque grand public du groupe LaSer, société de services dans l'intermédiation et la relation client.
 Solvabilité : 	La solvabilité est la mesure de la capacité d'une personne physique ou morale à payer ses dettes sur le court, moyen et long terme, elle permet d'apprécier la capacité à faire face à ses engagements (court long et moyen terme)
@@ -55,7 +69,8 @@ https://www.datacamp.com/c…/tutorials/machine-learning-in-r…
 https://www.kaggle.com/wiki/Tutorials 
 https://www.analyticsvidhya.com/…/common-machine-learning-…/ 
 https://www.mooc-list.com/tags/machine-learning 
-...
+
+
 Pour le prix du certif COURSERA c'est ca depends du cours mais Machine Learning c'est 70e.
 Pour Kaggle : 
 User : marketmaker
